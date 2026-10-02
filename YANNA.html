@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A Little Letter 💌</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap');
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fceef4;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #c2185b;
+            font-family: 'Great Vibes', cursive;
+            font-size: 42px;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        #envelope {
+            width: 300px;
+            height: 200px;
+            background: #f48fb1;
+            border-radius: 12px;
+            margin: auto;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 80px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        #envelope:hover {
+            transform: scale(1.06);
+        }
+
+        #letter {
+            display: none;
+            width: 430px;
+            min-height: 380px;
+            padding: 38px 45px;
+            background: #fffdfb;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            color: #4a3a40;
+            text-align: left;
+            box-sizing: border-box;
+            animation: openLetter 0.8s ease;
+        }
+
+        #letter .heart {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 5px;
+        }
+
+        #letter h2 {
+            text-align: center;
+            color: #c2185b;
+            font-family: 'Great Vibes', cursive;
+            font-size: 38px;
+            font-weight: normal;
+            margin: 5px 0 25px;
+        }
+
+        #letter p {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 19px;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .signature {
+            margin-top: 25px;
+            text-align: right;
+            font-family: 'Great Vibes', cursive;
+            font-size: 27px;
+            color: #c2185b;
+        }
+
+        @keyframes openLetter {
+            from {
+                opacity: 0;
+                transform: scale(0.7) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>♡ You have a little letter ♡</h1>
+
+    <div id="envelope" onclick="openLetter()">
+        💌
+    </div>
+
+    <div id="letter">
+
+        <div class="heart">💗</div>
+
+        <h2>For Amber</h2>
+
+        <p>
+            Hello, baby ko! 💗
+            <br><br>
+
+            I just hope you’re doing fine today. Pagaling ka, darling ko,
+            and please take good care of yourself always.
+            I hope you’re doing your best with your acads too,
+            but don’t forget to rest when you need to.
+            <br><br>
+
+            I’m always proud of you, no matter what.
+            Love you always, baby.
+            Please stay safe and take care always.
+        </p>
+
+        <div class="signature">
+            Your baby, Yna. 💗
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function openLetter() {
+    document.getElementById("envelope").style.display = "none";
+    document.getElementById("letter").style.display = "block";
+}
+</script>
+
+</body>
+</html>
